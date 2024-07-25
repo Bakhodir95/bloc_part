@@ -7,7 +7,7 @@ sealed class CounterState {
 }
 
 class CounterInitial extends CounterState {
-  const CounterInitial(int number) : super(number);
+  const CounterInitial(super.number);
 }
 
 class CounterLoading extends CounterState {
