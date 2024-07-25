@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:bloc_part/logic/counter/counter_state.dart';
+import 'package:bloc_part/logic/cubits/counter/counter_state.dart';
 
 class CounterCubit extends Cubit<CounterState> {
   CounterCubit() : super(CounterInitial(0));
