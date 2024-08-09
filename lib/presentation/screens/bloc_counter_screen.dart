@@ -21,14 +21,11 @@ class BlocCounterScreen extends StatelessWidget {
               ),
               BlocListener<CounterBloc, CounterState>(
                 listener: (context, state) {
-                  if (state == 4) {
-                    showDialog(
-                        context: context,
-                        builder: (ctx) {
-                          return const AlertDialog(
-                            content: Text("Ajoyib"),
-                          );
-                        });
+                  // ignore: unrelated_type_equality_checks
+                  if (state.number == 4) {
+                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text('Counter reached 10!'),
+                    ));
                   }
                 },
                 child: BlocBuilder<CounterBloc, CounterState>(

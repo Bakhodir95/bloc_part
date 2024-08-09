@@ -6,6 +6,7 @@ sealed class CounterState {
   const CounterState(this.number);
 }
 
+
 class CounterInitial extends CounterState {
   const CounterInitial(super.number);
 }
